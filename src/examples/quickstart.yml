@@ -8,5 +8,5 @@ usage:
   workflows:
     test:
       jobs:
-        - phylum/analyze
+        - phylum/analyze:
             api_key: ${PHYLUM_API_KEY}
