@@ -28,7 +28,10 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - phylum-orb/greet
+      - phylum-orb/install
+      - run:
+          name: Verify Installation
+          command: phylum --version
 workflows:
   test-deploy:
     jobs:
