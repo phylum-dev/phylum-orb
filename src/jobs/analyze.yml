@@ -12,6 +12,9 @@ parameters:
 steps:
   - checkout
   - run:
+      name: Set Head
+      command: git remote set-head origin --auto
+  - run:
       name: Print Phylum version
       command: phylum --version
   - run:
