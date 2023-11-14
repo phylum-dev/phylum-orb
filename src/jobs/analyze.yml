@@ -13,4 +13,4 @@ steps:
   - checkout
   - run:
       name: Analyze latest commit
-      command: phylum-ci -vvafk << parameters.api_key >>
+      command: TERM=dumb phylum-ci -vvafk << parameters.api_key >>
