@@ -12,14 +12,5 @@ parameters:
 steps:
   - checkout
   - run:
-      name: Set Head
-      command: >
-        apt-get -y update;
-        apt-get -y install openssh-client;
-        git remote set-head origin --auto;
-  - run:
-      name: Print Phylum version
-      command: phylum --version
-  - run:
       name: Analyze latest commit
-      command: phylum-ci -k << parameters.api_key >>
+      command: phylum-ci -vvafk << parameters.api_key >>
