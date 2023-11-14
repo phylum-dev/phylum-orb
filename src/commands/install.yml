@@ -4,4 +4,4 @@ description: >
 steps:
   - run:
       name: Install CLI
-      command: <<include(scripts/greet.sh)>>
+      command: <<include(scripts/install.sh)>>
