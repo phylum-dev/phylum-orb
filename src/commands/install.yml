@@ -1,7 +1,0 @@
-description: >
-  Install the Phylum CLI
-
-steps:
-  - run:
-      name: Install CLI
-      command: <<include(scripts/install.sh)>>

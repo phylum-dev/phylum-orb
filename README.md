@@ -1,10 +1,5 @@
 # Orb Template
 
-
-[![CircleCI Build Status](https://circleci.com/gh/phylum-dev/phylum-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/phylum-dev/phylum-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/phylum-dev/phylum-orb.svg)](https://circleci.com/developer/orbs/orb/phylum-dev/phylum-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/phylum-dev/phylum-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
-
-
-
 A project template for Orbs.
 
 This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
@@ -15,7 +10,7 @@ _**Edit this area to include a custom title and description.**_
 
 ## Resources
 
-[CircleCI Orb Registry Page](https://circleci.com/developer/orbs/orb/phylum-dev/phylum-orb) - The official registry page of this orb for all versions, executors, commands, and jobs described.
+[CircleCI Orb Registry Page](https://circleci.com/developer/orbs/orb/phylum-dev/phylum) - The official registry page of this orb for all versions, executors, commands, and jobs described.
 
 [CircleCI Orb Docs](https://circleci.com/docs/orb-intro/#section=configuration) - Docs for using, creating, and publishing CircleCI Orbs.
 
@@ -27,7 +22,7 @@ We welcome [issues](https://github.com/phylum-dev/phylum-orb/issues) to and [pul
 1. Merge pull requests with desired changes to the main branch.
     - For the best experience, squash-and-merge and use [Conventional Commit Messages](https://conventionalcommits.org/).
 2. Find the current version of the orb.
-    - You can run `circleci orb info phylum-dev/phylum-orb | grep "Latest"` to see the current version.
+    - You can run `circleci orb info phylum-dev/phylum | grep "Latest"` to see the current version.
 3. Create a [new Release](https://github.com/phylum-dev/phylum-orb/releases/new) on GitHub.
     - Click "Choose a tag" and _create_ a new [semantically versioned](http://semver.org/) tag. (ex: v1.0.0)
       - We will have an opportunity to change this before we publish if needed after the next step.

@@ -1,0 +1,10 @@
+description: >
+  Run Phylum Analysis
+
+docker:
+  - image: phylumio/phylum-ci
+
+steps:
+  - checkout
+  - run:
+      command: phylum --version
