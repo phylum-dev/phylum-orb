@@ -1,0 +1,12 @@
+description: >
+  Run a Phylum analysis on the latest commit
+
+usage:
+  version: 2.1
+  orbs:
+    phylum: phylum-dev/phylum@1.0.0
+  workflows:
+    test:
+      jobs:
+        - phylum/analyze
+            api_key: ${PHYLUM_API_KEY}
