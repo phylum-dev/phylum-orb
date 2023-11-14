@@ -1,34 +1,24 @@
-# Orb Template
+# Phylum CircleCI Orb
 
-A project template for Orbs.
+The Phylum Orb allows for automatic analysis of your lockfiles and manifests for
+vulnerable dependencies.
 
-This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
+## Usage
 
-_**Edit this area to include a custom title and description.**_
+You can find the Phylum Orb on the [CircleCI Orb Registry Page].
 
----
+[CircleCI Orb Registry Page]: https://circleci.com/developer/orbs/orb/phylum-dev/phylum
 
-## Resources
+To use the Phylum Orb, add your Phylum API token as an environment variable
+named `PHYLUM_API_KEY` and add the following job to your workflow:
 
-[CircleCI Orb Registry Page](https://circleci.com/developer/orbs/orb/phylum-dev/phylum) - The official registry page of this orb for all versions, executors, commands, and jobs described.
-
-[CircleCI Orb Docs](https://circleci.com/docs/orb-intro/#section=configuration) - Docs for using, creating, and publishing CircleCI Orbs.
-
-### How to Contribute
-
-We welcome [issues](https://github.com/phylum-dev/phylum-orb/issues) to and [pull requests](https://github.com/phylum-dev/phylum-orb/pulls) against this repository!
-
-### How to Publish An Update
-1. Merge pull requests with desired changes to the main branch.
-    - For the best experience, squash-and-merge and use [Conventional Commit Messages](https://conventionalcommits.org/).
-2. Find the current version of the orb.
-    - You can run `circleci orb info phylum-dev/phylum | grep "Latest"` to see the current version.
-3. Create a [new Release](https://github.com/phylum-dev/phylum-orb/releases/new) on GitHub.
-    - Click "Choose a tag" and _create_ a new [semantically versioned](http://semver.org/) tag. (ex: v1.0.0)
-      - We will have an opportunity to change this before we publish if needed after the next step.
-4.  Click _"+ Auto-generate release notes"_.
-    - This will create a summary of all of the merged pull requests since the previous release.
-    - If you have used _[Conventional Commit Messages](https://conventionalcommits.org/)_ it will be easy to determine what types of changes were made, allowing you to ensure the correct version tag is being published.
-5. Now ensure the version tag selected is semantically accurate based on the changes included.
-6. Click _"Publish Release"_.
-    - This will push a new tag and trigger your publishing pipeline on CircleCI.
+```yml
+version: 2.1
+orbs:
+  phylum: phylum-dev/phylum@1.0.0
+workflows:
+  test:
+    jobs:
+      - phylum/analyze:
+          api_key: ${PHYLUM_API_KEY}
+```
