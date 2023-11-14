@@ -36,6 +36,7 @@ workflows:
       - command-test:
           filters: *filters
       - phylum/analyze:
+          api_key: ${PHYLUM_API_KEY}
           filters: *filters
       # The orb must be re-packed for publishing, and saved to the workspace.
       - orb-tools/pack:

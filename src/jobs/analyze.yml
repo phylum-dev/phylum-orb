@@ -4,7 +4,16 @@ description: >
 docker:
   - image: phylumio/phylum-ci
 
+parameters:
+  api_key:
+    type: string
+    description: "Phylum API key (https://app.phylum.io/tokens/list)"
+
 steps:
   - checkout
   - run:
+      name: Print Phylum version
       command: phylum --version
+  - run:
+      name: Analyze latest commit
+      command: phylum-ci -k << parameters.api_key >>
