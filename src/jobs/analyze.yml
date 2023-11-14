@@ -14,8 +14,9 @@ steps:
   - run:
       name: Set Head
       command: >
-        apt-get install openssh-client
-        git remote set-head origin --auto
+        apt-get update;
+        apt-get install openssh-client;
+        git remote set-head origin --auto;
   - run:
       name: Print Phylum version
       command: phylum --version
